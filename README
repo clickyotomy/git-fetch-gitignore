@@ -1,0 +1,22 @@
+git-fetch-gitignore
+-------------------
+
+Fetch .gitignore files from GitHub.
+
+USAGE
+    git-fetch-gitignore [-h] -l FILE [FILE ...] [-w FILE] [-o]
+                                  [-t TOKEN_FILE] [-d]
+
+    git-fetch-gitignore: Fetch .gitignore files from GitHub.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -l FILE [FILE ...], --list FILE [FILE ...]
+                            list of .gitignore files to fetch
+      -w FILE, --write-to FILE
+                            file to output; defaults to ./.gitignore
+      -o, --over-write      over-writes the existing .gitignore file if set,
+                            appends to it, by default
+      -t TOKEN_FILE, --token-file TOKEN_FILE
+                            a file containing the GitHub personal access token
+      -d, --debug           enable debugging

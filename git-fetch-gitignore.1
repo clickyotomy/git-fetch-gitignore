@@ -1,0 +1,49 @@
+.TH GIT-FETCH-GITIGNORE 1
+.SH NAME
+git-fetch-gitignore \- Fetch .gitignore file(s) from GitHub.
+
+.SH SYNOPSIS
+.B git-fetch-gitignore
+\fB-l\fR \fBFILE\fR [\fBFILE\fR ...]
+[\fB-w\fR \fBFILE\fR]
+[\fB-o\fR]
+[\fB-t\fR \fBTOKEN_FILE\fR]
+[\fB-d\fR]
+
+.SH DESCRIPTION
+.B git-fetch-gitignore
+Fetch .gitignore file(s) from GitHub (https://github.com/github/gitignore).
+
+A '.gitignore' file specifies intentionally untracked files to ignore in a git
+repository.
+
+.SH OPTIONS
+.TP
+\fB-l\fR \fBFILE\fR [\fBFILE\fR ...] \fB-\-list\fR \fBFILE\fR [\fBFILE\fR ...]
+List of .gitignore files to fetch.
+.TP
+.BR \-w ", " \fBFILE\fR ", " \-\-write\-to " "\fBFILE\fR
+File to write the fetched contents; defaults to "./.gitignore".
+.TP
+.BR \fB-o\fR ", " \-\-over\-write
+Over-writes the existing ".gitignore" file if set; appends to it, by default.
+.TP
+.BR \-t ", " \fBTOKEN_FILE\fR ", " \-\-token\-file " "\fBTOKEN_FILE\fR
+A file containing the GitHub personal access token.
+The script does a plain read on the file, so no need of any formatting.
+.TP
+.BR \-d ", " \-\-debug
+Enable debugging.
+.SH EXAMPLES
+To fetch .gitignore files for Python and C, (using a personal access token)
+from GitHub and write it to a file in foo/bar.
+.PP
+.nf
+.RS
+$ git fetch-gitignore --write-to "foo/bar/.gitignore" \\
+    --token-file github-token-file \\ --list python c
+.RE
+.fi
+.PP
+.SH "SEE ALSO"
+.BR gitignore (5)
