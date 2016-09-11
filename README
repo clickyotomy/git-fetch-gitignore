@@ -3,6 +3,11 @@ git-fetch-gitignore
 
 Fetch .gitignore files from GitHub.
 
+
+INSTALL
+    pip install --upgrade git-fetch-gitignore
+
+
 USAGE
     git-fetch-gitignore [-h] -l FILE [FILE ...] [-w FILE] [-o]
                                   [-t TOKEN_FILE] [-d]

@@ -17,13 +17,16 @@ setup(
     version='0.0.1',
     description='Fetch .gitignore files from GitHub',
     long_description=LONG_DESC,
+    license='MIT',
     url='https://github.com/clickyotomy/git-fetch-gitignore',
     author='Srinidhi Kaushik',
     author_email='clickyotomy@users.noreply.github.com',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
+        'Operating System :: Unix',
         'Topic :: Software Development :: Build Tools',
+        'Topic :: Software Development :: Version Control',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2.7',
     ],
@@ -32,7 +35,7 @@ setup(
     install_requires=['requests'],
     include_package_data=True,
     data_files=[
-        ('/usr/local/man/man1/git-fetch-gitignore.1',
+        ('/man/git-fetch-gitignore.1',
          ['./git-fetch-gitignore.1'])
     ],
     scripts=['bin/git_fetch_gitignore.py'],
@@ -41,4 +44,5 @@ setup(
             "git-fetch-gitignore=bin.git_fetch_gitignore:main",
         ],
     },
+    platforms=['Unix', 'Darwin']
 )
