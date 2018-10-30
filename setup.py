@@ -14,7 +14,7 @@ with open(path.join(HERE, 'README')) as f:
 
 setup(
     name='git-fetch-gitignore',
-    version='0.0.1',
+    version='0.0.2',
     description='Fetch .gitignore files from GitHub',
     long_description=LONG_DESC,
     license='MIT',
